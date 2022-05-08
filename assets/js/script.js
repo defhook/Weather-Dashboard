@@ -18,7 +18,7 @@ var displayName;
 var searchTerms = [];
 
 // Api Key
-var APIKey = "c0ca611c039a5c3e26518e2a1595b9ad";
+var APIKey = config.API_KEY;
 
 var getCoordinates = function(cityName) {
     var apiUrll = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial" + "&appid=" + APIKey;
