@@ -18,7 +18,7 @@ header, .btn {
 }
 
 .favorable {
-    background-color: var(--primary);
+    background-color: #228B22;
     color: var(--secondary);
 }
 
