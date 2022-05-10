@@ -18,10 +18,10 @@ var displayName;
 var searchTerms = [];
 
 // Api Key
-var API_KEY = config.API_Key;
+var apiKey = config.API_Key;
 
 var getCoordinates = function(cityName) {
-    var apiUrll = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial" + "&appid=" + API_KEY;
+    var apiUrll = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial" + "&appid=" + apiKey;
 
     fetch(apiUrll).then(function(response){
         if (response.ok) {
@@ -49,7 +49,7 @@ var getCoordinates = function(cityName) {
 // get forecast function
 var getForecast = function(lat,lon) {
     // weather request from api
-    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly,alerts&units=imperial&appid=" + API_KEY;
+    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly,alerts&units=imperial&appid=" + apiKey;
 
     fetch(apiUrl).then(function(response){
         if (response.ok) {
