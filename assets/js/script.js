@@ -21,7 +21,7 @@ var searchTerms = [];
 var API_KEY = config.API_KEY;
 
 var getCoordinates = function(cityName) {
-    var apiUrll = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial" + "&appid=" + APIKey;
+    var apiUrll = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial" + "&appid=" + API_KEY;
 
     fetch(apiUrll).then(function(response){
         if (response.ok) {
@@ -49,7 +49,7 @@ var getCoordinates = function(cityName) {
 // get forecast function
 var getForecast = function(lat,lon) {
     // weather request from api
-    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly,alerts&units=imperial&appid=" + APIKey;
+    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly,alerts&units=imperial&appid=" + API_KEY;
 
     fetch(apiUrl).then(function(response){
         if (response.ok) {
